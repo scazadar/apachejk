@@ -1,6 +1,6 @@
 # apache with mod_jk
 ## docker-compose example
-
+```
 apache:
   labels:
     traefik.frontend.rule: Host:xxx.xxx.com
@@ -36,14 +36,18 @@ mysql:
   volumes:
   - /path/to/mysql
   stdin_open: true
-
+```
+`
 ## workers.properties
+```
 worker.list=ajp13_worker
 worker.ajp13_worker.port=8009
 worker.ajp13_worker.host=glassfish
 worker.ajp13_worker.type=ajp13
+```
 
 ## site.conf
+```
 <VirtualHost *:80>
         ServerName xxx.xxx.com
 
@@ -53,3 +57,4 @@ worker.ajp13_worker.type=ajp13
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
+```
