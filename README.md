@@ -37,7 +37,6 @@ mysql:
   - /path/to/mysql
   stdin_open: true
 ```
-`
 ## workers.properties
 ```
 worker.list=ajp13_worker
